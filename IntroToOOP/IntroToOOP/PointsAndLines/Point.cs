@@ -10,36 +10,26 @@
             {
                 return username;
             }
-            set
-            {
-                if (value.Length > 4 && value.Length < 10)
-                {
-                    username = value;
-                }
-                else
-                {
-                    System.Console.WriteLine("Oops, username must have 4 to 10 characters.");
-                }
-
-            }
         }
 
         public int Password
         {
-            get
-            {
-                return password;
-            }
             set
             {
-                password = value;
+                if (value >= 4 && value <= 10)
+                {
+                    password = value;
+                }
+                else
+                {
+                    System.Console.WriteLine("Oops, the password must be a number between 4 and 10.");
+                }
             }
         }
 
-        public User(string username, int password)
+        public User(string username)
         {
-            this.username = username;
-            this.password = password;
+            this.username = username;            
         }
 
         public User() {
