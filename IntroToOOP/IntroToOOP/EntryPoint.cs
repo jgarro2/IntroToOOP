@@ -1,17 +1,22 @@
-﻿using PointsAndLines;
+﻿using System;
+using IntroToOOP;
+using PointsAndLines;
 
 class EntryPoint
 {
     static void Main()
     {
-        User user = new User();
+        User user = new User("abcd",Race.Earthling);
+        User secondUser = new User();
+        User thirdUser = new User();
 
-        user.Username = "abcd";
-        user.Password = 7;
-        System.Console.WriteLine(user.Username);
-        System.Console.WriteLine(user.Password);
+        Utilities.ColorfulWriteLine(user.Username, ConsoleColor.DarkRed);
 
-        System.Console.ReadLine();
+        Console.WriteLine(user.ID);
+        Console.WriteLine(secondUser.ID);
+        Console.WriteLine(thirdUser.ID);
+
+        Console.ReadLine();
     }
 }
 
